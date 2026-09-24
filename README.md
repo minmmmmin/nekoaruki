@@ -36,15 +36,17 @@
 ## ディレクトリ構成
 
 ```
-digital-contents/
-frontend/        # Next.js フロントエンド（メイン）
+nekoaruki/
+├── public/      # 静的ファイル
+├── src/         # Next.js アプリケーション本体
+├── supabase/    # Supabase マイグレーション
+└── middleware.ts
 ```
-※ `backend/` ディレクトリは現時点では使用していません。
 
 ## 開発環境のセットアップ
 
 ```bash
-cd frontend
+cp .env.sample .env.local   # 作成後、各値を設定する
 npm install
 npm run dev
 ```
@@ -56,12 +58,15 @@ npm run dev
 
 ## 環境変数
 
-環境変数は `.env.local` に設定してください。
+環境変数は `.env.local` に設定してください。必要な項目は `.env.sample` を参照してください。
 
-例：
-
-- Supabase URL / Anon Key
-- Google Maps API Key
+| 変数名 | 内容 |
+| --- | --- |
+| `NEXT_PUBLIC_GOOGLE_MAPS_API_KEY` | Google Maps API キー |
+| `NEXT_PUBLIC_GOOGLE_MAPS_MAP_ID` | Google Maps の Map ID |
+| `NEXT_PUBLIC_SUPABASE_URL` | Supabase プロジェクト URL |
+| `NEXT_PUBLIC_SUPABASE_ANON_KEY` | Supabase Anon Key |
+| `NEXT_PUBLIC_SUPABASE_SERVICE_ROLE_KEY` | Supabase Service Role Key |
 
 ※ 実際の値はリポジトリにコミットしないでください。
 
@@ -85,4 +90,3 @@ npm run dev
 - `.next/` と `node_modules/` は Git に含めない（`.gitignore` に記載）
 - Supabase の接続情報は `.env.local` に記述し、値は絶対に共有しない
 - ブランチ名は `feature/〇〇`、`fix/〇〇` などで統一
-- 基本作業ディレクトリは `frontend/` を使用
