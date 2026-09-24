@@ -66,7 +66,7 @@ npm run dev
 | `NEXT_PUBLIC_GOOGLE_MAPS_MAP_ID` | Google Maps の Map ID |
 | `NEXT_PUBLIC_SUPABASE_URL` | Supabase プロジェクト URL |
 | `NEXT_PUBLIC_SUPABASE_ANON_KEY` | Supabase Anon Key |
-| `NEXT_PUBLIC_SUPABASE_SERVICE_ROLE_KEY` | Supabase Service Role Key |
+| `SUPABASE_SERVICE_ROLE_KEY` | Supabase Service Role Key |
 
 ※ 実際の値はリポジトリにコミットしないでください。
 
