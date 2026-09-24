@@ -67,6 +67,7 @@ npm run dev
 | `NEXT_PUBLIC_SUPABASE_URL` | Supabase プロジェクト URL |
 | `NEXT_PUBLIC_SUPABASE_ANON_KEY` | Supabase Anon Key |
 | `SUPABASE_SERVICE_ROLE_KEY` | Supabase Service Role Key |
+| `CRON_SECRET` | Vercel Cron の認証用シークレット |
 
 ※ 実際の値はリポジトリにコミットしないでください。
 
